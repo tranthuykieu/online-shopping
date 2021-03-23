@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pororo/components/custom_suffix_icon.dart';
 import 'package:pororo/components/default_button.dart';
 import 'package:pororo/components/form_error.dart';
+import 'package:pororo/screens/forgot_password/forgot_password_screen.dart';
 
 import '../../constants.dart';
 import '../../size_config.dart';
@@ -44,9 +45,13 @@ class _SignFormState extends State<SignForm> {
                 ],
               ),
               Spacer(flex: 2),
-              Text(
-                "Forgot password?",
-                style: TextStyle(decoration: TextDecoration.underline),
+              GestureDetector(
+                onTap: () => Navigator.popAndPushNamed(
+                    context, ForgotPasswordScreen.routeName),
+                child: Text(
+                  "Forgot password?",
+                  style: TextStyle(decoration: TextDecoration.underline),
+                ),
               )
             ],
           ),

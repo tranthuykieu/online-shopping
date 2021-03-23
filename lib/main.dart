@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:pororo/constants.dart';
 import 'package:pororo/routs.dart';
 import 'package:pororo/screens/splash/splash_screen.dart';
 import 'package:pororo/theme.dart';

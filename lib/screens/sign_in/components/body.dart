@@ -1,9 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:pororo/components/no_account_text.dart';
 import 'package:pororo/components/social_card.dart';
 import 'package:pororo/constants.dart';
 import 'package:pororo/main.dart';
+import 'package:pororo/screens/forgot_password/forgot_password_screen.dart';
 import 'package:pororo/size_config.dart';
 
 import '../sign_form.dart';
@@ -30,7 +32,7 @@ class Body extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  "Sign in using your email or phone number",
+                  "Sign in using your email",
                   textAlign: TextAlign.center,
                 ),
                 SizedBox(height: SizeConfig.screenHeight * 0.08),
@@ -54,24 +56,7 @@ class Body extends StatelessWidget {
                   ],
                 ),
                 SizedBox(height: getProportionateScreenWidth(20)),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      "Don't have any account?  ",
-                      style:
-                          TextStyle(fontSize: getProportionateScreenWidth(15)),
-                    ),
-                    Text(
-                      "Sign up",
-                      style: TextStyle(
-                        decoration: TextDecoration.underline,
-                        fontSize: getProportionateScreenWidth(15),
-                        color: kPrimaryColor,
-                      ),
-                    )
-                  ],
-                ),
+                NoAccountText(),
               ],
             ),
           ),
