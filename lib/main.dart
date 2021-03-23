@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pororo/constants.dart';
 import 'package:pororo/routs.dart';
 import 'package:pororo/screens/splash/splash_screen.dart';
+import 'package:pororo/theme.dart';
 
 void main() {
   runApp(MyApp());
@@ -14,14 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(
-        scaffoldBackgroundColor: Colors.white,
-        fontFamily: "Muli",
-        textTheme: TextTheme(
-            bodyText1: TextStyle(color: kTextColor),
-            bodyText2: TextStyle(color: kTextColor)),
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
+      theme: theme(),
       // home: SplashScreen(),
       //  use routeName => do not neecd to remember all name
       initialRoute: SplashScreen.routeName,
