@@ -8,6 +8,7 @@ class LoginSuccessScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        // remove 'back' button on the upper left
         leading: SizedBox(),
         title: Text("Login Success"),
       ),

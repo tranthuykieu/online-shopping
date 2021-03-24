@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pororo/screens/complete_profile/complete_profile_screen.dart';
 import 'package:pororo/screens/forgot_password/forgot_password_screen.dart';
 import 'package:pororo/screens/login_success/login_success_screen.dart';
 import 'package:pororo/screens/sign_in/sign_in_screen.dart';
@@ -13,4 +14,5 @@ final Map<String, WidgetBuilder> routes = {
   ForgotPasswordScreen.routeName: (context) => ForgotPasswordScreen(),
   SignUpScreen.routeName: (context) => SignUpScreen(),
   LoginSuccessScreen.routeName: (context) => LoginSuccessScreen(),
+  CompleteProfileScreen.routeName: (context) => CompleteProfileScreen(),
 };
