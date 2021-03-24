@@ -50,11 +50,13 @@ class ForgotPassForm extends StatefulWidget {
 }
 
 class _ForgotPassFormState extends State<ForgotPassForm> {
+  final _formKey = GlobalKey<FormState>();
   List<String> errors = [];
   String email;
   @override
   Widget build(BuildContext context) {
     return Form(
+      key: _formKey,
       child: Column(
         children: [
           SizedBox(height: getProportionateScreenWidth(100)),
@@ -87,7 +89,7 @@ class _ForgotPassFormState extends State<ForgotPassForm> {
             // for decor
             decoration: InputDecoration(
               labelText: "Email",
-              hintText: "Enter your email or phone number",
+              hintText: "Enter your email",
               floatingLabelBehavior: FloatingLabelBehavior.always,
               suffixIcon: CustomSuffixIcon(svgIcon: 'assets/icons/Mail.svg'),
             ),
@@ -96,7 +98,11 @@ class _ForgotPassFormState extends State<ForgotPassForm> {
           FormError(errors: errors),
           DefaultButton(
             text: "Continue",
-            press: () {},
+            press: () {
+              if (_formKey.currentState.validate()) {
+                // hihi
+              }
+            },
           ),
           SizedBox(height: getProportionateScreenWidth(100)),
           NoAccountText(),
