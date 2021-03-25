@@ -3,6 +3,7 @@ import 'package:pororo/components/custom_suffix_icon.dart';
 import 'package:pororo/components/default_button.dart';
 import 'package:pororo/components/form_error.dart';
 import 'package:pororo/components/social_card.dart';
+import 'package:pororo/screens/otp/otp_screen.dart';
 
 import '../../constants.dart';
 import '../../size_config.dart';
@@ -44,13 +45,13 @@ class _CompleteProfileFormState extends State<CompleteProfileForm> {
         children: [
           SizedBox(height: getProportionateScreenWidth(30)),
           buildFirstNameFormField(),
-          SizedBox(height: getProportionateScreenWidth(5)),
+          SizedBox(height: getProportionateScreenWidth(20)),
           buildLastNameFormField(),
-          SizedBox(height: getProportionateScreenWidth(5)),
+          SizedBox(height: getProportionateScreenWidth(20)),
           buildPhoneNumberFormField(),
-          SizedBox(height: getProportionateScreenWidth(5)),
+          SizedBox(height: getProportionateScreenWidth(20)),
           buildAddressFormField(),
-          SizedBox(height: getProportionateScreenWidth(0)),
+          SizedBox(height: getProportionateScreenWidth(20)),
           FormError(errors: errors),
           SizedBox(height: getProportionateScreenWidth(10)),
           DefaultButton(
@@ -58,6 +59,7 @@ class _CompleteProfileFormState extends State<CompleteProfileForm> {
             press: () {
               if (_formKey.currentState.validate()) {
                 // go to OTP screen
+                Navigator.pushNamed(context, OtpScreen.routeName);
               }
             },
           ),
