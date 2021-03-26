@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pororo/size_config.dart';
 
 // const kPrimaryColor = Color(0xFFFF7643);
-const kPrimaryColor = Colors.green;
+const kPrimaryColor = Colors.lightGreen;
 const kPrimaryLightColor = Color(0xFFFFECDF);
 const kPrimaryGrandientColor = LinearGradient(
   begin: Alignment.topLeft,

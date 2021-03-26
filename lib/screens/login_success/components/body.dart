@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pororo/components/default_button.dart';
+import 'package:pororo/screens/home/home_screen.dart';
 import 'package:pororo/size_config.dart';
 
 class Body extends StatelessWidget {
@@ -19,7 +20,9 @@ class Body extends StatelessWidget {
               width: SizeConfig.screenWidth * 0.7,
               child: DefaultButton(
                 text: "Go shopping now",
-                press: () {},
+                press: () {
+                  Navigator.pushNamed(context, HomeScreen.routeName);
+                },
               ),
             )
           ],
