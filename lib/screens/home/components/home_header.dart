@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pororo/screens/cart/cart_screen.dart';
 import 'package:pororo/screens/home/components/search_field.dart';
 import 'package:pororo/screens/home/components/icon_btn_with_counter.dart';
 
@@ -21,9 +22,7 @@ class HomeHeader extends StatelessWidget {
           IconBtnWithCounter(
             svgSrc: "assets/icons/Cart Icon.svg",
             numOfItems: 3,
-            press: () {
-              // go to notification page
-            },
+            press: () => Navigator.pushNamed(context, CartScreen.routeName),
           ),
           IconBtnWithCounter(
             svgSrc: "assets/icons/Bell.svg",

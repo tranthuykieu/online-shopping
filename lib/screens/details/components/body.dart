@@ -7,7 +7,6 @@ import 'package:pororo/screens/details/components/product_images.dart';
 import 'package:pororo/screens/details/components/top_rounded_btn.dart';
 import 'package:pororo/size_config.dart';
 
-import '../../../constants.dart';
 import 'color_dots.dart';
 
 class Body extends StatelessWidget {
